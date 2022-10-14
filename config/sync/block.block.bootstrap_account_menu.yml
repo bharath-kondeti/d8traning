@@ -1,23 +1,22 @@
-uuid: 892f8002-f32e-475d-83ad-34be312e45ca
+uuid: c52c4395-8177-4170-bf87-bd4f2da1d799
 langcode: en
 status: true
 dependencies:
   config:
     - system.menu.account
   module:
-    - block_class
     - system
   theme:
-    - olivero
+    - bootstrap
 third_party_settings:
   block_class:
     classes: null
 _core:
-  default_config_hash: gmxYWWHmgbe0Pnv8y48ZLSLH5mEHejOjAP6RLxUfdzU
-id: olivero_account_menu
-theme: olivero
-region: secondary_menu
-weight: -4
+  default_config_hash: HrZTblWpMF4fo6BdbBcyHEu5Hp9ds1IZF3FiRd2Q8rU
+id: bootstrap_account_menu
+theme: bootstrap
+region: navigation_collapsible
+weight: 11
 provider: null
 plugin: 'system_menu_block:account'
 settings:
@@ -26,6 +25,6 @@ settings:
   label_display: '0'
   provider: system
   level: 1
-  depth: 1
+  depth: 2
   expand_all_items: false
 visibility: {  }

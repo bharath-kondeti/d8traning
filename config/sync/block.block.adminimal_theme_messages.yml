@@ -1,21 +1,20 @@
-uuid: 522d6cae-b00a-477e-bcde-06c088a6de5b
+uuid: dc046f1b-530c-4314-8d31-552cdfa9e4af
 langcode: en
 status: true
 dependencies:
   module:
-    - block_class
     - system
   theme:
-    - olivero
+    - adminimal_theme
 third_party_settings:
   block_class:
     classes: null
 _core:
-  default_config_hash: BZ5tpW7H8X4PVGRm3MImTIHd2tN0eF7zOtp4SpRYUA0
-id: olivero_messages
-theme: olivero
+  default_config_hash: YqKTtloWJ8FjLtfVNfrHaK6kVgxT67lC1cJ3j6i6WLo
+id: adminimal_theme_messages
+theme: adminimal_theme
 region: highlighted
-weight: -5
+weight: 0
 provider: null
 plugin: system_messages_block
 settings:
