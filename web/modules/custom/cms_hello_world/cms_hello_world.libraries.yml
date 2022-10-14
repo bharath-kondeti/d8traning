@@ -1,0 +1,7 @@
+cms_hello_world_library:
+  version: 1.x
+  css:
+    theme:
+      css/cms_hello_world.css: {}
+  js:
+    js/cms_hello_world.js: {}

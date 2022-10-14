@@ -1,0 +1,14 @@
+uuid: e9215962-d53c-47be-82fb-7e3a4f4527a2
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.buildingmanager
+  module:
+    - user
+id: user_add_role_action.buildingmanager
+label: 'Add the buildingmanager role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: buildingmanager

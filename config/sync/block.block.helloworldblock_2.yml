@@ -1,0 +1,25 @@
+uuid: 61c71ca8-3cf2-4507-a57c-05796465c1fa
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_class
+    - cms_hello_world
+  theme:
+    - bartik
+third_party_settings:
+  block_class:
+    classes: block-class
+id: helloworldblock_2
+theme: bartik
+region: content
+weight: 0
+provider: null
+plugin: hello_world_block
+settings:
+  id: hello_world_block
+  label: 'Hello World Block'
+  label_display: '0'
+  provider: cms_hello_world
+  enabled: 1
+visibility: {  }

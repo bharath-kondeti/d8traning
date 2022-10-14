@@ -1,0 +1,9 @@
+name: CMS basic page migration
+type: module
+core_version_requirement: ^9
+package: CMS Portal-Content Migrations
+dependencies:
+  - drupal:migrate
+  - drupal:migrate_drupal
+  - migrate_tools:migrate_tools
+  - migrate_plus:migrate_plus

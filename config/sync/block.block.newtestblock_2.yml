@@ -1,0 +1,31 @@
+uuid: 98204512-bc44-477a-82b7-d6bcb3156edd
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:71d74e17-7cfd-4544-bba3-f9137664745c'
+  module:
+    - block_class
+    - block_content
+  theme:
+    - olivero
+third_party_settings:
+  block_class:
+    classes: block-class
+    attributes: session|block-class-session
+    replaced_id: block-class-id
+id: newtestblock_2
+theme: olivero
+region: footer_top
+weight: 0
+provider: null
+plugin: 'block_content:71d74e17-7cfd-4544-bba3-f9137664745c'
+settings:
+  id: 'block_content:71d74e17-7cfd-4544-bba3-f9137664745c'
+  label: 'New Test Block'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

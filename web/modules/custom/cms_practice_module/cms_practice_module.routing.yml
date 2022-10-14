@@ -1,0 +1,7 @@
+cms_practice_module.hello_drupal:
+  path: '/hello-drupal'
+  defaults:
+    _controller: '\Drupal\cms_practice_module\Controller\HelloDrupal::helloDrupal'
+    _title: 'Hello Drupal'
+  requirements:
+    _permission: 'access content'
