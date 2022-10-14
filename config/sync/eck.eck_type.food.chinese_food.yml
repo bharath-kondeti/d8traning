@@ -1,0 +1,9 @@
+uuid: 290ef049-fe13-4881-ab45-eecf761d96e5
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_entity_type.food
+name: 'Chinese Food'
+type: chinese_food
+description: 'The food related to China.'

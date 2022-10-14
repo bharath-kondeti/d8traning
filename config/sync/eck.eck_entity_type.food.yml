@@ -1,0 +1,10 @@
+uuid: 14b4afd4-93ce-47d8-96ee-4a27f939d046
+langcode: en
+status: true
+dependencies: {  }
+id: food
+label: Food
+uid: true
+created: true
+changed: true
+title: true
