@@ -27,3 +27,7 @@ web/sites/*/settings.php
 
 # Sonarcube files
 /web/modules/custom/.scannerwork/
+
+/web/.csslintrc
+/web/.eslintignore
+/web/example.gitignore
