@@ -1,0 +1,9 @@
+uuid: 9b766963-a279-4412-b704-bb4ea86f5730
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_entity_type.food
+name: 'North Indian Food'
+type: north_indian_food
+description: 'The food related to North India.'

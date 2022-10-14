@@ -1,0 +1,9 @@
+uuid: da39dc55-f062-4a6c-a03c-4473c43b5e9a
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_entity_type.food
+name: 'South Indian Food'
+type: south_indian_food
+description: 'Food related to South India.'
