@@ -1,0 +1,79 @@
+<?php
+
+use Drupal\cms_hello_world\Event\NodeCreatedInfoEvent;
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\node\NodeInterface;
+
+/**
+ * Implements hook_help().
+ */
+function cms_hello_world_help($route_name, RouteMatchInterface $route_match)
+{
+  switch ($route_name) {
+    case 'help.page.cms_hello_world':
+      $output = '';
+      $output .= '<h3>About</h3>';
+      $output .= '<p>This is an practice module</h3>';
+      return $output;
+      break;
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function cms_hello_world_form_alter(&$form, FormStateInterface $form_state, $form_id)
+{
+  if ($form_id == 'salutation_config_form') {
+    $form['actions']['submit']['#value'] = 'Save Salutation';
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function cms_hello_world_form_salutation_config_form_alter(&$form, FormStateInterface $form_state, $form_id)
+{
+  $form['actions']['submit']['#value'] = 'Save Salutation Message';
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_insert().
+ */
+function cms_hello_world_node_insert(NodeInterface $node)
+{
+  $event = new NodeCreatedInfoEvent($node);
+  $event_dispatcher = \Drupal::service('event_dispatcher');
+  $event_dispatcher->dispatch(NodeCreatedInfoEvent::EVENT_NAME, $event);
+}
+
+
+/**
+ * Implements hook_mail().
+ */
+function cms_hello_world_mail($key, &$message, $params)
+{
+  switch ($key) {
+    case 'cms_hello_world_log':
+      $message['from'] = 'bharathkumarkondeti@gmail.com';
+      $message['subject'] = 'There is an error in the website';
+      $message['body'][] = $params['message'];
+      break;
+  }
+}
+
+
+/**
+ * Implements hook_theme().
+ */
+function cms_hello_world_theme($existing, $type, $theme, $path)
+{
+  return [
+    'cms_hello_world' => [
+      'variables' => [
+        'contentpiece' => NULL,
+      ]
+    ],
+  ];
+}

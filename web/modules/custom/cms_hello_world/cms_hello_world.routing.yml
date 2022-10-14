@@ -1,0 +1,39 @@
+cms_hello_world.hello_world:
+  path: '/hello-world'
+  defaults:
+    _controller: '\Drupal\cms_hello_world\Controller\HelloDrupalWorld::heyHello'
+    _title: 'Hello World Title'
+  requirements:
+    _permission: 'access control'
+cms_hello_world.helloparam:
+  path: '/hello/{id}'
+  defaults:
+    _controller: '\Drupal\cms_hello_world\Controller\HelloDrupalWorld::Hello'
+    _title: 'Hello With Params'
+  requirements:
+    _permission: 'access control'
+cms_hello_world.hellonodeparam:
+  path: '/hellonode/{node}'
+  defaults:
+    _controller: '\Drupal\cms_hello_world\Controller\HelloDrupalWorld::HelloNode'
+    _title: 'Hello With Params Node'
+  requirements:
+    _permission: 'access control'
+  options:
+    parameters:
+      node:
+        type: entity:node
+cms_hello_world.salutationform:
+  path: '/admin/config/salutation-configuration'
+  defaults:
+    _form: '\Drupal\cms_hello_world\Form\SalutationForm'
+    _title: 'Salutation Form'
+  requirements:
+    _permission: 'admininter site configuration'
+cms_hello_world.hello_page:
+  path: '/hello-page'
+  defaults:
+    _controller: cms_hello_world.hello_service:home
+    _title: 'Hello Page'
+  requirements:
+    _permission: 'access control'

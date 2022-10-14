@@ -1,0 +1,29 @@
+services:
+  cms_hello_world.salutation:
+    class: Drupal\cms_hello_world\HelloWorldSalutation
+    arguments: ['@config.factory']
+  cms_hello_world.my_config_subscriber:
+    class: Drupal\cms_hello_world\EventSubscriber\HelloWorldEventSubscriber
+    tags: 
+      - { name: 'event_subscriber' }
+  cms_hello_world.redirect_subscriber:
+    class: Drupal\cms_hello_world\EventSubscriber\HelloWorldRedirectSubscriber
+    arguments: ['@current_user']
+    tags:
+      - {name: 'event_subscriber'}
+  cms_hello_world.custom_node_subscriber:
+    class: Drupal\cms_hello_world\EventSubscriber\HelloWorldNodeEvent
+    tags:
+      - {name: 'event_subscriber'}
+  cms_hello_world.hello_service:
+    class: Drupal\cms_hello_world\HelloService
+  cms_hello_world.logger.channel.cms_hello_world:
+    parent: logger.channel_base
+    arguments: ['cms_hello_world']
+  cms_hello_world.logger.mail_logger:
+    class: Drupal\cms_hello_world\Logger\MailLogger
+    arguments:
+      - '@config.factory'
+      - '@logger.log_message_parser'
+    tags:
+      - {name: 'logger'}

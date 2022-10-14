@@ -1,0 +1,5 @@
+name: Hello World
+description: This is practice module.
+type: module
+core_version_requirement: ^9
+package: CMS-Practice

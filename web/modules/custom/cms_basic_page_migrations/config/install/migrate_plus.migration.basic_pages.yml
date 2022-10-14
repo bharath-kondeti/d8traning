@@ -1,0 +1,30 @@
+id: basic_pages
+description: Basic pages migration
+
+source:
+  plugin: basic_pages
+  key: migrate
+  track_changes: true
+
+process:
+  title: title
+  body: body
+  # uid:
+  #   plugin: entity_lookup
+  #   source: uid
+  #   value_key: uid
+  sticky: sticky
+  created: created
+  promote: promote
+  status: status
+  langcode:
+    plugin: default_value
+    default_value: "und"
+  type:
+    plugin: default_value
+    default_value: page
+
+destination:
+  plugin: entity:node
+  bundle: page
+

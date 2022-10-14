@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * Undocumented function
+ *
+ * @param [type] $existing
+ * @param [type] $type
+ * @param [type] $theme
+ * @param [type] $path
+ * @return void
+ */
+function cms_practice_module_theme($existing, $type, $theme, $path)
+{
+  return [
+    'hello_drupal' => [
+      'variables' => [
+        'title' => '',
+        'name' => '',
+        'designation' => '',
+        'current_company' => ''
+      ]
+    ]
+  ];
+}
