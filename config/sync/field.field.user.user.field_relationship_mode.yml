@@ -1,0 +1,30 @@
+uuid: dad13f08-4cf6-4650-bd98-ccbc5f905696
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_relationship_mode
+    - taxonomy.vocabulary.relationship
+  module:
+    - user
+id: user.user.field_relationship_mode
+field_name: field_relationship_mode
+entity_type: user
+bundle: user
+label: 'Relationship Mode'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      relationship: relationship
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

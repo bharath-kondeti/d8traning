@@ -1,0 +1,9 @@
+uuid: 5cdc1213-48c9-48ee-b954-013635add511
+langcode: en
+status: true
+dependencies: {  }
+id: countryadmin
+label: countryadmin
+weight: 3
+is_admin: null
+permissions: {  }

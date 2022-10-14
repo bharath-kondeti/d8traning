@@ -1,0 +1,8 @@
+uuid: 359d20fa-bd5c-4f89-8f61-a31ee1a8cf5c
+langcode: en
+status: true
+dependencies: {  }
+name: Relationship
+vid: relationship
+description: ''
+weight: 0

@@ -1,0 +1,23 @@
+_core:
+  default_config_hash: u2wQ4ot4t4xKOJKWxoKwelgzx8j37Ve5SQ0qqxtVXlQ
+maxlength_block_class_field: 255
+field_type: multiple_textfields
+default_case: standard
+block_classes_stored: '{"block-class":"block-class"}'
+enable_attributes: true
+enable_auto_complete: true
+qty_classes_per_block: 10
+items_per_page: 50
+enable_special_chars: false
+qty_attributes_per_block: 10
+enable_id_replacement: true
+weight_attributes: 0
+weight_class: 0
+weight_id: 0
+filter_html_clean_css_identifier: ''
+maxlength_attributes: 0
+maxlength_id: 255
+id_replacement_stored: '{"newtestblock_2":"block-class-id"}'
+attribute_keys_stored: '{"session":"session"}'
+attribute_value_stored: '{"block-class-session":"block-class-session"}'
+attributes_inline: '{"session=block-class-session":"session=block-class-session"}'
