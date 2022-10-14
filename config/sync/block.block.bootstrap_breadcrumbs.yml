@@ -1,21 +1,20 @@
-uuid: 8b1d5b1b-fb99-4c4b-994e-cf78286e9532
+uuid: 4a42531b-818e-49c9-af8f-4c6d79fd95c5
 langcode: en
 status: true
 dependencies:
   module:
-    - block_class
     - system
   theme:
-    - olivero
+    - bootstrap
 third_party_settings:
   block_class:
     classes: null
 _core:
-  default_config_hash: VhBzWb7lMRtIOg9G7VSw_0uopi-7zXeHq4vXqqV1HFE
-id: olivero_breadcrumbs
-theme: olivero
-region: breadcrumb
-weight: 0
+  default_config_hash: wDR9JKEATSWldBjw8du8s3G2zjEYeQf88nlld11hMLo
+id: bootstrap_breadcrumbs
+theme: bootstrap
+region: header
+weight: -100
 provider: null
 plugin: system_breadcrumb_block
 settings:

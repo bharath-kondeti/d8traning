@@ -1,21 +1,20 @@
-uuid: f504f4ad-4fe1-4e0d-86ac-595f69cb964a
+uuid: 4115a78e-cdf7-4248-ad30-c8ef26402e47
 langcode: en
 status: true
 dependencies:
   module:
-    - block_class
     - system
   theme:
-    - olivero
+    - bootstrap
 third_party_settings:
   block_class:
     classes: null
 _core:
-  default_config_hash: eYL19CLDyinGTWYQfBD1DswWzglEotE_kHnHx3AxTXM
-id: olivero_powered
-theme: olivero
-region: footer_bottom
-weight: 0
+  default_config_hash: iggZSiUKz4mYP1YPJ8SsUfFu79HIgOTt6IDy3Up59aM
+id: bootstrap_powered
+theme: bootstrap
+region: footer
+weight: -10
 provider: null
 plugin: system_powered_by_block
 settings:

@@ -1,20 +1,18 @@
-uuid: 6cb7e512-2efb-42bd-bfc8-384006cd2652
+uuid: 32f26279-a7a9-4deb-96ba-1fbf6c63817c
 langcode: en
 status: true
 dependencies:
-  module:
-    - block_class
   theme:
-    - olivero
+    - adminimal_theme
 third_party_settings:
   block_class:
     classes: null
 _core:
-  default_config_hash: Q9_2whdOj1YIomfvsIfopROW4FT_X5pY0DjdOiOaQ5U
-id: olivero_primary_admin_actions
-theme: olivero
-region: highlighted
-weight: -5
+  default_config_hash: ik4PTMlBD0MWansnSMpSXq5SUlWRJ1IVVt6C7AIbQmc
+id: adminimal_theme_local_actions
+theme: adminimal_theme
+region: content
+weight: -10
 provider: null
 plugin: local_actions_block
 settings:

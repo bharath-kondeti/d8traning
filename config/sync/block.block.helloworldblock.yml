@@ -1,0 +1,24 @@
+uuid: 8483076a-ee2d-4fd4-a283-006e3d94bd00
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_class
+    - cms_practice_module
+  theme:
+    - olivero
+third_party_settings:
+  block_class:
+    classes: null
+id: helloworldblock
+theme: olivero
+region: footer_top
+weight: 0
+provider: null
+plugin: hello_world
+settings:
+  id: hello_world
+  label: 'Hello World Block'
+  label_display: visible
+  provider: cms_practice_module
+visibility: {  }

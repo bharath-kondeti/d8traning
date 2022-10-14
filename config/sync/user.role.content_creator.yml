@@ -1,9 +1,9 @@
-uuid: 48c5d094-a441-4074-884f-731ad05b1b34
+uuid: 35bd86bf-73c4-466e-88c1-59f5461d1675
 langcode: en
 status: true
 dependencies: {  }
-id: buildingmanager
-label: buildingmanager
+id: content_creator
+label: 'Content Creator'
 weight: 4
 is_admin: null
 permissions: {  }

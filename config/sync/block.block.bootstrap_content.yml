@@ -1,19 +1,18 @@
-uuid: 0d82ef00-9637-4f24-9f69-b10b9accfda6
+uuid: f91044b8-639d-4484-840f-79e4c9d93a20
 langcode: en
 status: true
 dependencies:
   module:
-    - block_class
     - system
   theme:
-    - olivero
+    - bootstrap
 third_party_settings:
   block_class:
     classes: null
 _core:
-  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
-id: olivero_content
-theme: olivero
+  default_config_hash: fNNLN48MSGSLiqwIFywCuxH2Dk_IxDbaP0kYhg_IPrg
+id: bootstrap_content
+theme: bootstrap
 region: content
 weight: 0
 provider: null

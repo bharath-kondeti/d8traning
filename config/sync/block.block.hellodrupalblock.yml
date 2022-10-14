@@ -1,0 +1,24 @@
+uuid: 37e5f861-f31d-4c3b-b401-4e265f4de0d7
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_class
+    - cms_practice_module
+  theme:
+    - olivero
+third_party_settings:
+  block_class:
+    classes: null
+id: hellodrupalblock
+theme: olivero
+region: footer_top
+weight: 0
+provider: null
+plugin: hello_drupal
+settings:
+  id: hello_drupal
+  label: 'Hello Drupal Block'
+  label_display: visible
+  provider: cms_practice_module
+visibility: {  }
