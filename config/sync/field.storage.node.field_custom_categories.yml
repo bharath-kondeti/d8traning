@@ -1,0 +1,30 @@
+uuid: 65966131-7cd9-4c9a-8d0a-0e634e836a60
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_custom_categories
+field_name: field_custom_categories
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: a
+      label: A
+    -
+      value: b
+      label: B
+    -
+      value: c
+      label: C
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.article.body
     - field.field.node.article.comment
+    - field.field.node.article.field_custom_categories
     - field.field.node.article.field_image
     - field.field.node.article.field_tags
     - image.style.thumbnail
@@ -40,6 +41,12 @@ content:
   created:
     type: datetime_timestamp
     weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_custom_categories:
+    type: options_select
+    weight: 26
     region: content
     settings: {  }
     third_party_settings: {  }

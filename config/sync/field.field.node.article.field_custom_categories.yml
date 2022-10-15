@@ -1,0 +1,21 @@
+uuid: fda32765-719d-407a-b528-a58b14d6dc6d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_custom_categories
+    - node.type.article
+  module:
+    - options
+id: node.article.field_custom_categories
+field_name: field_custom_categories
+entity_type: node
+bundle: article
+label: 'Custom Categories'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

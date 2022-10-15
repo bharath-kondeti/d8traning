@@ -1,0 +1,21 @@
+uuid: f39ec855-e5a4-4d71-9086-a0f9edde2652
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_custom_categories
+    - node.type.page
+  module:
+    - options
+id: node.page.field_custom_categories
+field_name: field_custom_categories
+entity_type: node
+bundle: page
+label: 'Custom Categories'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
