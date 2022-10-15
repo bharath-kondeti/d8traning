@@ -11,7 +11,11 @@ Personal Repo for learning concepts with D8 and D9
     - Entity construction kit.
     - This module is used to create entity system like nodes etc.
     - We need to create entity, select the base available fields, add bundles and then create fields based on requirements.
-
+  ### EVA:
+    - Entity View Attachment
+    - EVA provides a Views display plugin that allows the output of a View to be attached to the content of any Drupal entity.
+    - EVA will be created as view attachment and will be added to manage display tab for the content type.
+    - This plugin provides filter getting nodes from other content type based on some argument passed from some another content type.
 ## DRUSH:
   - drush cr: Cache clear
   - drush en module_name: For enabling module
