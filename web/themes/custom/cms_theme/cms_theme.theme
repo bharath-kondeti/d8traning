@@ -1,0 +1,22 @@
+<?php
+
+use Drupal\Core\Form\FormStateInterface;
+/**
+ * Implements hook_form_system_theme_settings_alter().
+ */
+function cms_theme_form_system_theme_settings_alter(&$form, FormStateInterface $form_state) {
+  $form['custom_test_var'] = [
+    '#type' => 'textfield',
+    '#description' => 'Custom Testing Field',
+    '#title' => 'Enter Some Text Here',
+    '#default_value' => theme_get_setting('custom_test_var') ? theme_get_setting('custom_test_var') : 'Testing', 
+  ];
+}
+
+/**
+ * Implements hook_preprocess_page().
+ */
+function cms_theme_preprocess_page(&$variables) {
+  \Drupal::logger('cms_theme')->notice(print_r(theme_get_setting('custom_test_var'), TRUE));
+  $variables['custom_text_var'] = 'NewValue';
+}

@@ -1,0 +1,5 @@
+name: CMS Theme
+description: Custom cms theme of learning purposes.
+type: theme
+core_version_requirement: ^8 || ^9
+base theme: bootstrap

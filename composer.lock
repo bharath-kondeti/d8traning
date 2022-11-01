@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "30265c87aa6fea30300b50cc26fdbe82",
+    "content-hash": "beeda780c9ce76ae8f8d290ec74c9f12",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -183,6 +183,104 @@
                 "source": "https://github.com/Chi-teck/drupal-code-generator/tree/2.6.1"
             },
             "time": "2022-09-15T09:13:57+00:00"
+        },
+        {
+            "name": "commercie/currency",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Commercie/currency.git",
+                "reference": "a175cdcf45a08d5a234146b9a3fd74e42d98a692"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Commercie/currency/zipball/a175cdcf45a08d5a234146b9a3fd74e42d98a692",
+                "reference": "a175cdcf45a08d5a234146b9a3fd74e42d98a692",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "php": "~5.5 || ~7.0 || ~8.0"
+            },
+            "require-dev": {
+                "justinrainbow/json-schema": "~5.2",
+                "phpunit/phpunit": "~9.0"
+            },
+            "suggest": {
+                "drupal/currency": "Integrates this package with Drupal."
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Commercie\\Currency\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bart Feenstra",
+                    "email": "bart@mynameisbart.com",
+                    "homepage": "http://mynameisbart.com",
+                    "role": "Developer"
+                }
+            ],
+            "support": {
+                "issues": "https://github.com/Commercie/currency/issues",
+                "source": "https://github.com/Commercie/currency/tree/1.2.0"
+            },
+            "time": "2022-09-11T08:27:10+00:00"
+        },
+        {
+            "name": "commercie/currency-exchange",
+            "version": "1.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Commercie/currency-exchange.git",
+                "reference": "9284d3d1b5d6492baf8ede9f16f8ba9e66e98122"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Commercie/currency-exchange/zipball/9284d3d1b5d6492baf8ede9f16f8ba9e66e98122",
+                "reference": "9284d3d1b5d6492baf8ede9f16f8ba9e66e98122",
+                "shasum": ""
+            },
+            "require": {
+                "ext-bcmath": "*",
+                "ext-json": "*",
+                "php": "~7.1 || ~8.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~9.0"
+            },
+            "suggest": {
+                "commercie/currency-exchange-yahoo-finance": "Retrieves currency exchange rates from Yahoo! Finance.",
+                "drupal/currency": "Integrates this package with Drupal."
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Commercie\\CurrencyExchange\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bart Feenstra",
+                    "email": "bart@mynameisbart.com"
+                }
+            ],
+            "description": "A library for retrieving currency exchange rates.",
+            "support": {
+                "issues": "https://github.com/Commercie/currency-exchange/issues",
+                "source": "https://github.com/Commercie/currency-exchange/tree/1.3.0"
+            },
+            "time": "2022-09-11T11:12:50+00:00"
         },
         {
             "name": "composer/installers",
@@ -3057,6 +3155,65 @@
             }
         },
         {
+            "name": "drupal/currency",
+            "version": "3.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/currency.git",
+                "reference": "8.x-3.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/currency-8.x-3.3.zip",
+                "reference": "8.x-3.3",
+                "shasum": "9e4fa704caa3fdded1419aebb1c289abdf5c27d3"
+            },
+            "require": {
+                "commercie/currency": "~1.0",
+                "commercie/currency-exchange": "~1.0",
+                "drupal/core": "^8.8 || ^9",
+                "drupal/plugin": "^2.6",
+                "ext-bcmath": "*",
+                "php": "~7.1"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-3.3",
+                    "datestamp": "1595621136",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Drupal\\currency\\": "src"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Drupal\\Tests\\currency\\": "tests/src"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Berdir",
+                    "homepage": "https://www.drupal.org/user/214652"
+                }
+            ],
+            "description": "Provides your Drupal site with currency conversion, currency information & metadata, and amount/price display functionality.",
+            "homepage": "https://www.drupal.org/project/currency",
+            "support": {
+                "source": "https://git.drupalcode.org/project/currency"
+            }
+        },
+        {
             "name": "drupal/devel",
             "version": "4.2.1",
             "source": {
@@ -3120,6 +3277,55 @@
                 "source": "https://gitlab.com/drupalspoons/devel",
                 "issues": "https://gitlab.com/drupalspoons/devel/-/issues",
                 "slack": "https://drupal.slack.com/archives/C012WAW1MH6"
+            }
+        },
+        {
+            "name": "drupal/devel_php",
+            "version": "1.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/devel_php.git",
+                "reference": "8.x-1.5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/devel_php-8.x-1.5.zip",
+                "reference": "8.x-1.5",
+                "shasum": "eca4f0fba9f89ffcc104478a1107de2e2f9fe926"
+            },
+            "require": {
+                "drupal/core": "^9.2 || ^10",
+                "drupal/devel": ">=2.1"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.5",
+                    "datestamp": "1649422110",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Grimreaper",
+                    "homepage": "https://www.drupal.org/user/2388214"
+                },
+                {
+                    "name": "lussoluca",
+                    "homepage": "https://www.drupal.org/user/138068"
+                }
+            ],
+            "description": "Re-add Execute PHP feature to Devel.",
+            "homepage": "https://www.drupal.org/project/devel_php",
+            "support": {
+                "source": "https://git.drupalcode.org/project/devel_php"
             }
         },
         {
@@ -4447,6 +4653,58 @@
             }
         },
         {
+            "name": "drupal/number_scroller",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/number_scroller.git",
+                "reference": "8.x-1.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/number_scroller-8.x-1.1.zip",
+                "reference": "8.x-1.1",
+                "shasum": "54689ebec642f75aafb90a8a56cfe00cee3819ba"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.1",
+                    "datestamp": "1588853295",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "polaki_viswanath",
+                    "homepage": "https://www.drupal.org/user/979906"
+                },
+                {
+                    "name": "ravi.kiran",
+                    "homepage": "https://www.drupal.org/user/1635706"
+                },
+                {
+                    "name": "sashi.kiran",
+                    "homepage": "https://www.drupal.org/user/1284174"
+                }
+            ],
+            "description": "Srolls a number to a specified values with defined speed.",
+            "homepage": "https://www.drupal.org/project/number_scroller",
+            "support": {
+                "source": "https://git.drupalcode.org/project/number_scroller"
+            }
+        },
+        {
             "name": "drupal/paragraphs",
             "version": "1.15.0",
             "source": {
@@ -4592,6 +4850,68 @@
                 "source": "https://cgit.drupalcode.org/pathauto",
                 "issues": "https://www.drupal.org/project/issues/pathauto",
                 "documentation": "https://www.drupal.org/docs/8/modules/pathauto"
+            }
+        },
+        {
+            "name": "drupal/plugin",
+            "version": "2.9.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/plugin.git",
+                "reference": "8.x-2.9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/plugin-8.x-2.9.zip",
+                "reference": "8.x-2.9",
+                "shasum": "e27f10361f508ddf4c23b884ef17e8b66c93c445"
+            },
+            "require": {
+                "drupal/core": "^8.7.7 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-2.9",
+                    "datestamp": "1640100551",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Drupal\\plugin\\": "src"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Drupal\\Tests\\plugin\\": "tests/src"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Berdir",
+                    "homepage": "https://www.drupal.org/user/214652"
+                },
+                {
+                    "name": "bradjones1",
+                    "homepage": "https://www.drupal.org/user/405824"
+                },
+                {
+                    "name": "joachim",
+                    "homepage": "https://www.drupal.org/user/107701"
+                }
+            ],
+            "description": "Provides tools that extend Drupal's plugin system.",
+            "homepage": "https://www.drupal.org/project/plugin",
+            "support": {
+                "source": "https://git.drupalcode.org/project/plugin"
             }
         },
         {
