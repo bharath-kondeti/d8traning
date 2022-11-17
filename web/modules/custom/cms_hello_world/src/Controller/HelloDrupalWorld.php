@@ -55,6 +55,11 @@ class HelloDrupalWorld extends ControllerBase
    */
   public function heyHello()
   {
+    // $type = \Drupal::service('plugin.manager.sandwich');
+    // $type->createInstance('foo');
+    // $type->createInstance('hellosandwich');
+    // echo "Called";
+    // die();
     $privateFactory = \Drupal::service('tempstore.private');
     $store = $privateFactory->get('cms_hello_world.pri_coll');
     $store->set('test_key', 'test_value');
