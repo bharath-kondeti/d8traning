@@ -6,9 +6,21 @@ use Drupal\Core\Controller\ControllerBase;
 use Drupal\node\NodeInterface;
 use Drupal\cms_hello_world\HelloWorldSalutation;
 use Symfony\Component\DependencyInjection\ContainerInterface;
+use Drupal\Core\TempStore\PrivateTempStoreFactory;
+use Drupal\Core\TempStore\SharedTempStoreFactory;
 
 class HelloDrupalWorld extends ControllerBase
 {
+
+  /**
+   * @var \Drupal\Core\TempStore\PrivateTempStoreFactory $privateFactory
+   */
+  protected $privateFactory;
+
+  /**
+   * @var \Drupal\Core\TempStore\SharedTempStoreFactory $sharedFactory
+   */
+  protected $sharedFactory;
 
   /**
    * @var
@@ -43,6 +55,21 @@ class HelloDrupalWorld extends ControllerBase
    */
   public function heyHello()
   {
+    // $type = \Drupal::service('plugin.manager.sandwich');
+    // $type->createInstance('foo');
+    // $type->createInstance('hellosandwich');
+    // echo "Called";
+    // die();
+    $privateFactory = \Drupal::service('tempstore.private');
+    $store = $privateFactory->get('cms_hello_world.pri_coll');
+    $store->set('test_key', 'test_value');
+
+    $sharedFactory = \Drupal::service('tempstore.shared');
+    $store = $sharedFactory->get('cms_hello_world.shared_coll');
+    $store->set('test_key_shared', 'test_value');
+
+    \Drupal::service('user.data')->set('cms_hello_world', 1, 'user_test_key', 'user_test_value');
+
     return [
       '#theme' => 'cms_hello_world',
       '#contentpiece' => $this->salutation->getSalutation(),

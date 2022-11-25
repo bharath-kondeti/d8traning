@@ -37,3 +37,17 @@ cms_hello_world.hello_page:
     _title: 'Hello Page'
   requirements:
     _permission: 'access control'
+cms_hello_world.hello_listings:
+  path: '/hello-listings'
+  defaults:
+    _controller: '\Drupal\cms_hello_world\Controller\SandwichListings::sandwichList'
+    _title: 'Hello World Title'
+  requirements:
+    _permission: 'access control'
+cms_hello_world.issue_report:
+  path: '/report-issue'
+  defaults:
+    _form: '\Drupal\cms_hello_world\Form\IssueReportForm'
+    _title: 'Issue Report Form'
+  requirements:
+    _access: 'TRUE'

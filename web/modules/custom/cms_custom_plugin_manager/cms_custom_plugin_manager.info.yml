@@ -1,0 +1,4 @@
+name: CMS custom plugin type
+description: Learning how to create custom plugin type.
+type: module
+core_version_requirement: ^8 || ^9

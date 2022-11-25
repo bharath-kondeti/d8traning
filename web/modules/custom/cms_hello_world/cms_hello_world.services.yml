@@ -27,3 +27,7 @@ services:
       - '@logger.log_message_parser'
     tags:
       - {name: 'logger'}
+  cms_hello_world.issue_report_subscriber:
+    class: Drupal\cms_hello_world\EventSubscriber\IssueReportSubscriber
+    tags:
+      - {name: 'event_subscriber'}

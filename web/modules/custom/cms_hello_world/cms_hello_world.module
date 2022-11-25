@@ -77,3 +77,23 @@ function cms_hello_world_theme($existing, $type, $theme, $path)
     ],
   ];
 }
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function cms_hello_world_theme_suggestions_node_alter(array &$suggestions, $variables)
+{
+  $node = $variables['elements']['#node'];
+  $suggestions[] = 'node__bharath_' . $node->id() .  '_custom';
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function cms_hello_world_preprocess_html(&$variables)
+{
+  $node = \Drupal::routeMatch()->getParameter('node');
+  if (is_object($node)) {
+    $variables['custom_node_id'] = $node->id();
+  }
+}

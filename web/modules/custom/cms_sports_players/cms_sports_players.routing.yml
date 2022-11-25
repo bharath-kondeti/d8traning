@@ -1,0 +1,6 @@
+cms_sports_players.practice_queries:
+  path: '/practice-queies'
+  defaults:
+    _controller: '\Drupal\cms_sports_players\Controller\PracticeDrupalQueries::PracticeQueries'
+  requirements:
+    _access: 'TRUE'
