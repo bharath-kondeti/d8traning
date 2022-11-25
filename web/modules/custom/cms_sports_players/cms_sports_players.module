@@ -1,0 +1,29 @@
+<?php
+
+use Drupal\Core\Database\Query\AlterableInterface;
+
+/**
+ * Implements hook_query_alter().
+ */
+function cms_sports_players_query_alter(AlterableInterface $query) {
+  if (!$query->hasTag('player_q')) {
+    return;
+  }
+  // Alter Query
+  $query->join('teams', 't', 't.id = p.id');
+  $query->addField('t', 'name', 'team_name');
+  $query->condition('p.id', '3');
+}
+
+/**
+ * Implements hook_query_TAG_alter().
+ */
+function cms_sports_players_query_player_qq_alter(AlterableInterface $query) {
+  if (!$query->hasTag('player_qq')) {
+    return;
+  }
+  // Alter Query
+  $query->join('teams', 't', 't.id = p.id');
+  $query->addField('t', 'name', 'team_name');
+  $query->condition('p.id', '4');
+}

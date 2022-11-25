@@ -1,0 +1,94 @@
+<?php
+
+/**
+* Implements hook_schema().
+*/
+
+function cms_sports_players_schema() {
+  $schema['teams'] = [
+    'description' => 'The table stores the teams data.',
+    'fields' => [
+      'id' => [
+        'description' => 'The team id which is the primary identifier.',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ],
+      'name' => [
+        'description' => 'The team name.',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+      ],
+      'description' => [
+        'description' => 'The team description.',
+        'type' => 'text',
+        'size' => 'normal',
+      ],
+    ],
+    'primary key' => ['id'],
+  ];
+
+  $schema['players'] = [
+    'description' => 'The table stores the players data.',
+    'fields' => [
+      'id' => [
+        'description' => 'The player id which is the primary identifier.',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ],
+      'name' => [
+        'description' => 'The player name.',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+      ],
+      'team_id' => [
+        'description' => 'The ID of the team it belongs to.',
+        'type' => 'int',
+        'unsigned' => TRUE,
+      ],
+      'data' => [
+        'description' => 'Arbitrary data about the player.',
+        'type' => 'blob',
+        'size' => 'big',
+      ],
+    ],
+    'primary key' => ['id'],
+  ];
+
+  return $schema;
+}
+
+/**
+ * Add location field to teams table.
+ */
+function cms_sports_players_update_9001() {
+  $field = [
+    'description' => 'The location of the team',
+    'type' => 'varchar',
+    'length' => 255,
+  ];
+
+  $schema = \Drupal::database()->schema();
+  $schema->addField('teams', 'location', $field);
+
+}
+
+/**
+ * Add gender field to players table.
+ */
+function cms_sports_players_update_9002()
+{
+  $field = [
+    'description' => 'The gender of the team',
+    'type' => 'varchar',
+    'length' => 255,
+  ];
+
+  $schema = \Drupal::database()->schema();
+  $schema->addField('players', 'gender', $field);
+}

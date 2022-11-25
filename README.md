@@ -173,9 +173,14 @@ Personal Repo for learning concepts with D8 and D9
         - $node->set('field_custom', 'some text');
         - $node->save();
       - Rendering Config entities:
-        - 
-
-    
+        - To be continued
+  ### The SCHEMA API:
+    - The main purpose of schema API is to create DB definitions in PHP, interact with Drupal with those definitions and convert them into tables.
+    - The central component of the SCHEMA API is hook_schema. This will be defined in .install file of custom module and this file is triggered only once during the module install.
+    - If we need to update any existing table, we will work through post update hooks.
+    - We can also use hook_query_alter or hook_query_tag_alter by adding a tag to the sql query we are writing and alter the query from custom module.
+    - hook_update_N
+      - If we want to use to update the schema once the module is installed, we must use hook_update_N and run with update.php or drush updb command.
 ## DRUSH:
   - drush cr: Cache clear
   - drush en module_name: For enabling module

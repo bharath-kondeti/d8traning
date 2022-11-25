@@ -1,0 +1,5 @@
+name: CMS Sports Players Custom Schema
+description: The pratice module for SCHEMA API.
+type: module
+core_version_requirement: ^9
+package: CMS-Practice
