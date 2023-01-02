@@ -50,4 +50,15 @@ cms_hello_world.issue_report:
     _form: '\Drupal\cms_hello_world\Form\IssueReportForm'
     _title: 'Issue Report Form'
   requirements:
-    _access: 'TRUE'
+  # We can define single permissions
+    # _permission: 'access my nodes'
+  # We can define multiple permissions using comma and plus sign
+  # Plus sign works as OR operator, the route must have atleast one access.
+    # _permission: 'access my nodes+access content+access my content'
+  # Comma sign works as AND operator, the route must have all the access presented.
+    # _permission: 'access my nodes,access content,access my content'
+  # Custom Access checks
+    # Static way:
+    # _custom_access: '\Drupal\cms_hello_world\Form\IssueReportForm::access'
+    # Service way:
+    _hello_world_access_check: 'TRUE'

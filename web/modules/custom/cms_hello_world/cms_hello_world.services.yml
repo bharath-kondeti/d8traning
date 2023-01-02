@@ -31,3 +31,7 @@ services:
     class: Drupal\cms_hello_world\EventSubscriber\IssueReportSubscriber
     tags:
       - {name: 'event_subscriber'}
+  cms_hello_world.access_checker:
+    class: Drupal\cms_hello_world\Access\HelloWorldAccess
+    tags:
+      - {name: access_check, applies_to: _hello_world_access_check}

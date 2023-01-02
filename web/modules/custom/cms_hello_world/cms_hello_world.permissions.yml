@@ -1,0 +1,3 @@
+cms hello world block access:
+  title: 'Access custom blocks'
+  description: 'Custom access to custom block plugins.'
