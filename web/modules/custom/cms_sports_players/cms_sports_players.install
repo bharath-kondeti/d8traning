@@ -1,5 +1,7 @@
 <?php
 
+use Drupal\user\Entity\User;
+
 /**
 * Implements hook_schema().
 */
@@ -81,8 +83,7 @@ function cms_sports_players_update_9001() {
 /**
  * Add gender field to players table.
  */
-function cms_sports_players_update_9002()
-{
+function cms_sports_players_update_9002() {
   $field = [
     'description' => 'The gender of the team',
     'type' => 'varchar',
@@ -91,4 +92,19 @@ function cms_sports_players_update_9002()
 
   $schema = \Drupal::database()->schema();
   $schema->addField('players', 'gender', $field);
+}
+
+/**
+ * Update User Type field for all users
+ */
+function cms_sports_players_update_9003() {
+  $userStorage = \Drupal::entityTypeManager()->getStorage('user');
+  $query = $userStorage->getQuery();
+  $uids = $query->condition('status', 1)->execute();
+  foreach($uids as $uid) {
+    $uType = 'manager';
+    $user = User::load($uid);
+    $user->set('field_u', $uType);
+    $user->save();
+  }
 }

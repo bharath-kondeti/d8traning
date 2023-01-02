@@ -4,6 +4,8 @@ use Drupal\cms_hello_world\Event\NodeCreatedInfoEvent;
 use Drupal\Core\Routing\RouteMatchInterface;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\node\NodeInterface;
+use Drupal\Core\Access\AccessResult;
+use Drupal\node\Plugin\views\filter\Access;
 
 /**
  * Implements hook_help().
@@ -97,3 +99,18 @@ function cms_hello_world_preprocess_html(&$variables)
     $variables['custom_node_id'] = $node->id();
   }
 }
+
+
+/**
+* Implements hook_form_FORM_ID_alter().
+*/
+// function cms_hello_world_form_issue_report_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+//   $current_user = \Drupal::currentUser();
+//   \Drupal::logger('custom_access_check')->notice('dadsasdsada 1');
+//   if(!$current_user->hasPermission('access my nodes')) {
+//     \Drupal::logger('custom_access_check')->notice('dadsasdsada 2');
+//     return AccessResult::forbidden('No Access here');
+//   } else {
+//     \Drupal::logger('custom_access_check')->notice('Else case');
+//   }
+// }

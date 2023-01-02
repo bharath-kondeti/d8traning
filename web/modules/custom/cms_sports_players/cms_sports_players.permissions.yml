@@ -1,0 +1,8 @@
+access my nodes:
+  title: 'Access my nodes'
+  description: 'Custom access to my nodes and content items.'
+
+access my content:
+  title: 'Access my content pieces'
+  description: 'Custom access to my nodes and content items.'
+  restrict access: true

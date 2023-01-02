@@ -181,6 +181,18 @@ Personal Repo for learning concepts with D8 and D9
     - We can also use hook_query_alter or hook_query_tag_alter by adding a tag to the sql query we are writing and alter the query from custom module.
     - hook_update_N
       - If we want to use to update the schema once the module is installed, we must use hook_update_N and run with update.php or drush updb command.
+  ### DRUPAL ACCESS SYSTEM:
+    - Roles, Permissions, Accesses
+    - Route Access:
+      - While defining routes, we can give route permission in requirements > _permission key. We can give permission names, where we give permission names.
+      - We also have _role, where we can give role names as permission check for routes
+      - Custom Route Access:
+        - The _permission and _role route access check if defined by core and very flexible, but its hard-coded. 
+        - If we need to have dynamic route access checks, we must use _custom_access key where we can define a class with some code where we can handle access to the routes.
+        - There are two approaches; static approach and service approach. Static is we define the class and call it in _custom_access directly. Service approach, we create the class and reference it.
+        - Static:
+          - This approach generally involves with creating access method in your controller or Form
+          - In that access methods, we use AccessResultInterface and its required classes to declare the access checks.
 ## DRUSH:
   - drush cr: Cache clear
   - drush en module_name: For enabling module

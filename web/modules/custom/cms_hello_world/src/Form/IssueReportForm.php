@@ -3,9 +3,11 @@
 namespace Drupal\cms_hello_world\Form;
 
 use Drupal\cms_hello_world\Event\IssueReportEvent;
+use Drupal\Core\Access\AccessResult;
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Messenger\MessengerTrait;
+use Drupal\Core\Session\AccountInterface;
 use Drupal\Core\StringTranslation\StringTranslationTrait;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
@@ -21,6 +23,16 @@ class IssueReportForm extends FormBase {
    * @var \Symfony\Component\EventDispatcher\EventDispatcherInterface
    */
   protected $event_dispatcher;
+
+  /**
+   * Custom route access check.
+   *
+   * @param \Drupal\Core\Session\AccountInterface $account
+   * @return Drupal\Core\Access\AccessResult
+   */
+  public function access(AccountInterface $account) {
+    return in_array('administrator', $account->getRoles()) ? AccessResult::allowed() : AccessResult::forbidden();
+  }
 
   /**
    * Construct the Issue Report Form object
